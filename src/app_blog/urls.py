@@ -1,6 +1,7 @@
 from django.urls import path
-from .views import view
+from .views import read, create
 
 urlpatterns = [
-    path('', view, name='blog-page'),
+    path('', create.view, name='blog-create'),
+    path('<int:id>/', read.view, name='blog-read'),
 ]
