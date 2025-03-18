@@ -4,8 +4,12 @@ from django.db import connection
 def query(query="", params=[]):
     with connection.cursor() as cursor:
         cursor.execute(query, params)
-        row = dictfetchall(cursor)
-    return row
+
+        # Jika query adalah SELECT, ambil hasilnya
+        if query.strip().lower().startswith("select"):
+            return dictfetchall(cursor)
+        else:
+            return None  # Untuk DELETE/INSERT/UPDATE, kembalikan None
 
 def dictfetchall(cursor):
     """
