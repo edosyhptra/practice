@@ -12,6 +12,27 @@ wheels = [
 ]
 
 [[package]]
+name = "click"
+version = "8.1.8"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b9/2e/0090cbf739cee7d23781ad4b89a9894a41538e4fcf4c31dcdd705b78eb8b/click-8.1.8.tar.gz", hash = "sha256:ed53c9d8990d83c2a27deae68e4ee337473f6330c040a31d4225c9574d16096a", size = 226593 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/7e/d4/7ebdbd03970677812aac39c869717059dbb71a4cfc033ca6e5221787892c/click-8.1.8-py3-none-any.whl", hash = "sha256:63c132bbbed01578a06712a2d1f497bb62d9c1c0d329b7903a866228027263b2", size = 98188 },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335 },
+]
+
+[[package]]
 name = "django"
 version = "5.1.7"
 source = { registry = "https://pypi.org/simple" }
@@ -35,20 +56,47 @@ wheels = [
 ]
 
 [[package]]
+name = "granian"
+version = "2.1.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "click" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/93/1b/d9f3fa51ba81911f2f6e254e79355c231778373cc305cf41105eae4d475d/granian-2.1.0.tar.gz", hash = "sha256:3bdb300a4068bfa4e14046d92f3b68a562a4bbecf0b4b8f07c90057683f2d3ae", size = 93386 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/6e/82/ab39162b80030cd4266ec74802e7d91f410a1ced723a240a7e801e07dd09/granian-2.1.0-cp313-cp313-macosx_10_12_x86_64.whl", hash = "sha256:07ee07b896e84960eb2d210c0422563667014274e4016d415e77b9ecd1bba70a", size = 2870904 },
+    { url = "https://files.pythonhosted.org/packages/8a/97/ed070bff3ad867cac2556b79bd0b44b57d2859c49ea0f7a943c479938885/granian-2.1.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:388da4ef0e237579f8d62338176507bd7315a858e433fc12d7a1e738d0c038e5", size = 2599133 },
+    { url = "https://files.pythonhosted.org/packages/73/ed/a85a348e5edfc24616f330a7a49f9a69e724f5253442d39a7e99e14bae65/granian-2.1.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:959a021b5e49dcd63b69b13bf3736e0acd2ce54ed4f4f80787297f21b41fab02", size = 2959983 },
+    { url = "https://files.pythonhosted.org/packages/4b/ec/080f0a7ad2768c3208618029412f48b12c476d246d561363b8cb83d82cc6/granian-2.1.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ffdac58874d46a432ea2417a33ee02202c4996ff87901b6a7ec99d8620dd561c", size = 3040079 },
+    { url = "https://files.pythonhosted.org/packages/70/87/9472d6e82e069a40281ccfc24f25b74f1dc2dcdd607c77ada3fdf38ade3e/granian-2.1.0-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:5007691be1a61679f855e815ea869bd074878834d187ecf891f8ea99d5df8c0d", size = 2905741 },
+    { url = "https://files.pythonhosted.org/packages/67/e7/ed52c3aa14ec6d06b3f30c179fb0c69666188b0fce154446a64ea2fee3b8/granian-2.1.0-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:93ed43d4438a0ddff0fb291b3abf5fb3c11e058f905d501288f3ebfb51811980", size = 2997721 },
+    { url = "https://files.pythonhosted.org/packages/01/78/c4b099530edb6c6ea3ea8ae5fe17a21128597032f3ea071066622d01aa67/granian-2.1.0-cp313-cp313-win_amd64.whl", hash = "sha256:91770fd64dff9de61537a8b698612c5c54cd5fb29978b95f15de7772cb508456", size = 2609693 },
+    { url = "https://files.pythonhosted.org/packages/9e/70/f3638ad73f45f2ad0c64ad4b7e9ac40ebd4e2d303c5c6fcbdad70907d373/granian-2.1.0-cp313-cp313t-macosx_10_12_x86_64.whl", hash = "sha256:b74f0f6371bdf6b541a933319d5d5aaa9b4e56e5870ff5fc290c87b4682cc25a", size = 2740613 },
+    { url = "https://files.pythonhosted.org/packages/af/e1/f47d3cfd5f72d1a75c4a87b7ab3ef08c9c69e78e93a1bda74faa30a2206c/granian-2.1.0-cp313-cp313t-macosx_11_0_arm64.whl", hash = "sha256:14536a619fdb03a3042a19b1e431e3e42e4591e4d5813c725045d63fcce2f104", size = 2474128 },
+    { url = "https://files.pythonhosted.org/packages/b5/b1/79f1be7c7ed0a9a712aa409f211e74e75378cd268d07d57c189a1871d1ad/granian-2.1.0-cp313-cp313t-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bf1fdb1b893a90cf67f5af6f2afd0aeda802a05aaaeffe76770138610093b2c3", size = 2763572 },
+    { url = "https://files.pythonhosted.org/packages/1f/f0/6e243978919814b941cd8edd2558582802b3a43d92defc18fdce3d2e5bda/granian-2.1.0-cp313-cp313t-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a38c1e9e7b722bed8f88d25c89770d6cb1cedccf972072b8e747ccde54e6edaa", size = 2852467 },
+    { url = "https://files.pythonhosted.org/packages/d1/71/c1a3875d6e79f55f5a21b3941ef65ec4f4f5388fd7cdaa6eb205f544b603/granian-2.1.0-cp313-cp313t-musllinux_1_1_aarch64.whl", hash = "sha256:14122af8f0c28c5e09dece374dcecfc56fbffa77d04bdd99b08cfbb315104f37", size = 2899011 },
+    { url = "https://files.pythonhosted.org/packages/b5/9e/be7c805dd5a8ead759655b95f037a2249ac1b2af968d1bb4d069e1f43dbe/granian-2.1.0-cp313-cp313t-musllinux_1_1_x86_64.whl", hash = "sha256:b49af76a84ec174d64aee4ce0d911a168129be77895e7c3b2b34587f9a63366d", size = 2988516 },
+    { url = "https://files.pythonhosted.org/packages/bd/6f/2e253c49a43dc49bd7c71a4c4e0494f5c5db8da74b1ecdb02a42ef32d9c3/granian-2.1.0-cp313-cp313t-win_amd64.whl", hash = "sha256:f9f20873b742c233b78bcfa03f42d1c24184b78968454101d55416c7a60ba7b4", size = 2521411 },
+]
+
+[[package]]
 name = "practice"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "django" },
     { name = "django-environ" },
+    { name = "granian" },
     { name = "psycopg2-binary" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "django", specifier = ">=5.1.7" },
-    { name = "django-environ", specifier = ">=0.12.0" },
-    { name = "psycopg2-binary", specifier = ">=2.9.10" },
+    { name = "django", specifier = "==5.1.7" },
+    { name = "django-environ", specifier = "==0.12.0" },
+    { name = "granian", specifier = ">=2.1.0" },
+    { name = "psycopg2-binary", specifier = "==2.9.10" },
 ]
 
 [[package]]
